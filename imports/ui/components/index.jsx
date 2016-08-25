@@ -3,10 +3,11 @@ import React from 'react';
 export const Index = () => (
   <div className="container">
     <h1>Welcome to Hadits</h1>
-    <a className="button button-primary" href="#">Anchor button</a>
-    <button className="button-primary">Button element</button>
-    <input className="button-primary" type="submit" value="submit input"></input>
-    <input className="button-primary" type="button" value="button input"></input>
+      <a className="button" href="#">Anchor button</a>
+      <button>Button element</button>
+      <input type="submit" value="submit input"/>
+      <input type="button" value="button input"/>
+
     <div className="row">
       <div className="one column">One</div>
       <div className="eleven columns">Eleven</div>

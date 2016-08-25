@@ -1,17 +1,15 @@
-/* CSS declarations go here */
+/* CSS declarations go here
+@import "/imports/ui/stylesheets/normalize.css";*/
 h1 {
   text-align: center;
 }
-.column {
+.column, .columns {
   background-color: #cdcdcd;
   padding: 3px;
   border-radius: 3px;
   margin: 3px;
 }
 
-.columns{
-  background-color: #cdcdcd;
-  padding: 3px;
-  border-radius: 3px;
-  margin: 3px;
+a, input, button {
+  margin: 2px;
 }
