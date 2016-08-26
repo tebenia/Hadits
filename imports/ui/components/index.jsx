@@ -1,13 +1,7 @@
 import React from 'react';
 
 export const Index = () => (
-  <div className="container">
-    <h1>Welcome to Hadits</h1>
-      <a className="button" href="#">Anchor button</a>
-      <button>Button element</button>
-      <input type="submit" value="submit input"/>
-      <input type="button" value="button input"/>
-
+  <div>
     <div className="row">
       <div className="one column">One</div>
       <div className="eleven columns">Eleven</div>
