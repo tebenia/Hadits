@@ -1,12 +1,10 @@
 import React from 'react';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
-import {Index} from '/imports/ui/components/index';
-import {MainLayout} from '/imports/ui/layouts/main';
+import {mount} from 'react-mounter';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import {Routes} from './routes';
 
-export const Routes = () => (
-  <Router history={browserHistory}>
-    <Route path="/" component={MainLayout}>
-      <IndexRoute component={Index}/>
-    </Route>
-  </Router>
-);
+injectTapEventPlugin();
+
+Meteor.startup(() => {
+  mount(Routes);
+});

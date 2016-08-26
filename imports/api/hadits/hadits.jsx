@@ -1,4 +1,5 @@
 import {Mongo} from 'meteor/mongo';
+import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 
 export const Hadits = new Mongo.Collection("hadits");
 Hadits.allow({
@@ -25,16 +26,29 @@ Hadits.deny({
   }
 });
 
-const HaditsSchema = new SimpleSchema({
+Hadits.schema = new SimpleSchema({
   title:{
     type: String,
     label: "Title"
   },
+  userId: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Id
+  },
   createdAt: {
     type: Date,
     label: "Date submitted",
+    denyUpdate: true,
     autoValue(){
       return new Date();
     }
   }
 });
+
+Hadits.helpers({
+  editableByUser(userId){
+    return this.userId === userId;
+  }
+});
+
+Hadits.attachSchema(Hadits.schema);
