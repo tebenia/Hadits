@@ -19,3 +19,6 @@ ecmascript@0.5.7              # Enable ECMAScript2015+ syntax in app code
 
 skeleton:skeleton
 aldeed:collection2
+accounts-ui
+accounts-google
+service-configuration
