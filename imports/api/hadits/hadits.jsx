@@ -40,7 +40,14 @@ Hadits.schema = new SimpleSchema({
     label: "Date submitted",
     denyUpdate: true,
     autoValue(){
-      return new Date();
+      if (this.isInsert) {
+        return new Date();
+      } else if(this.isUpsert){
+        return {
+          $setOnInsert: new Date()
+        };
+      }
+      this.unset();
     }
   }
 });
