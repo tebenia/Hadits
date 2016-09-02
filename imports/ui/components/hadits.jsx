@@ -1,13 +1,31 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
+import {remove} from '/imports/api/hadits/methods';
+import {Link} from 'react-router';
 
-const Hadits = (props) => (
-  <div>
-      <h4>{props.title}</h4>
-  </div>
-);
+class Hadits extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleDeleteClick = this.handleDeleteClick.bind(this);
+  }
+
+  handleDeleteClick(event){
+    remove.call({haditsId:this.props._id});
+  }
+
+  render() {
+    return (
+      <div>
+        <h3>{this.props.title}</h3>
+        <button onClick={this.handleDeleteClick}>Delete</button>
+        <Link className="button" to={`/hadits/${this.props._id}`}>Edit</Link>
+      </div>
+    );
+  }
+}
 
 Hadits.propTypes = {
-  title: React.PropTypes.string
+  title: PropTypes.string
 };
 
 export default Hadits;
