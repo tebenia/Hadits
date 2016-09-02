@@ -2,10 +2,7 @@ import React from 'react';
 
 const Hadits = (props) => (
   <div>
-    <h3>Daftar Hadits:</h3>
-    <ol>
-      <li>{props.title}</li>
-    </ol>
+      <h4>{props.title}</h4>
   </div>
 );
 
