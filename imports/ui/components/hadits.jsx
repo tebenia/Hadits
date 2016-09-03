@@ -5,7 +5,7 @@ import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 
 const styles = {
   card: {
-    minHeight: 200,
+    minHeight: 200
   }
 };
 

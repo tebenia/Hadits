@@ -1,5 +1,6 @@
-/* CSS declarations go here
-@import "/imports/ui/stylesheets/normalize.css";*/
+/* CSS declarations go here*/
+@import "{}/imports/ui/stylesheets/normalize.scss";
+@import "{}/imports/ui/stylesheets/sticky.scss";
 h1 {
   text-align: center;
 }
