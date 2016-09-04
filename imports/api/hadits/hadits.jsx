@@ -1,7 +1,7 @@
 import {Mongo} from 'meteor/mongo';
 import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 
-export const Hadits = new Mongo.Collection("hadits");
+const Hadits = new Mongo.Collection("hadits");
 Hadits.allow({
   insert: function(){
     return false;
@@ -58,4 +58,5 @@ Hadits.helpers({
   }
 });
 
+export default Hadits;
 Hadits.attachSchema(Hadits.schema);

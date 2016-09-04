@@ -1,5 +1,5 @@
 import React from 'react';
-import AccountsUIWrapper from '/imports/ui/components/accountsUIWrapper';
+import AccountsUIWrapper from '../components/accountsUIWrapper';
 import {Link} from 'react-router';
 import Header from './header';
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";

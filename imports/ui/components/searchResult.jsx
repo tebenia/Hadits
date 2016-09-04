@@ -9,7 +9,7 @@ const styles = {
   }
 };
 
-class Hadits extends Component {
+class SearchResult extends Component {
   constructor(props) {
     super(props);
 
@@ -46,8 +46,8 @@ class Hadits extends Component {
   }
 }
 
-Hadits.propTypes = {
+SearchResult.propTypes = {
   hadits: PropTypes.object
 };
 
-export default Hadits;
+export default SearchResult;

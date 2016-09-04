@@ -7,7 +7,7 @@ const HaditsList = (props) => (
       props.hadits.map(hadit =>
         <Hadits
           key={hadit._id}
-          book={hadit}
+          hadits={hadit}
         />
       )
     }
