@@ -1,7 +1,6 @@
 import React from 'react';
-import AccountsUIWrapper from '../components/accountsUIWrapper';
-import {Link} from 'react-router';
 import Header from './header';
+import UserProfile from '../components/userProfile';
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
@@ -17,13 +16,18 @@ const styles = {
 
 const MainLayout = ({children}) => (
   <MuiThemeProvider muiTheme={lightMuiTheme}>
-    <div className="row">
-      <div>
-        <Header/>
-        <div className="container" style={styles.container}>
-          <AccountsUIWrapper/>
-          <Link to="hadits/add" className="button">Add Hadits</Link>
-          {children}
+    <div>
+      <Header/>
+      <div className="container">
+        <div className="row" style={styles.container}>
+          <div className="twelve columns">
+            <UserProfile/>
+          </div>
+        </div>
+        <div className="row">
+          <div className="twelve columns">
+            {children}
+          </div>
         </div>
       </div>
     </div>

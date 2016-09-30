@@ -5,7 +5,8 @@ import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 
 const styles = {
   card: {
-    minHeight: 200
+    minHeight: 200,
+    width: "100%"
   }
 };
 
@@ -22,7 +23,7 @@ class Hadits extends Component {
 
   render() {
     return (
-      <div className="one-third column">
+      <div className="six columns">
         <Card style={styles.card}>
           <CardHeader
             title={this.props.hadits.title}

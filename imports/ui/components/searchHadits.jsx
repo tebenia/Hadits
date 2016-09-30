@@ -1,6 +1,17 @@
 import React, {Component} from 'react';
 import {TextField} from 'material-ui';
 import SearchList from '../containers/searchList';
+import {Paper} from 'material-ui';
+
+const styles = {
+    paper: {
+      textAlign: "center",
+      padding: 10
+    },
+    form: {
+      width: "100%",
+    }
+};
 
 class SearchHadits extends Component {
   constructor(props) {
@@ -46,16 +57,19 @@ class SearchHadits extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <TextField
-            name="searchTitleInput"
-						ref="searchTitle"
-						hintText="Type Hadits you are looking for..."
-            floatingLabelText="Search"
-            value={this.state.titleInput}
-            onChange={this.handleInputChange}
-          />
-        </form>
+        <Paper style={styles.paper} zDepth={1}>
+          <form onSubmit={this.handleSubmit}>
+            <TextField
+              name="searchTitleInput"
+  						ref="searchTitle"
+  						hintText="Type Hadits you are looking for..."
+              floatingLabelText="Search"
+              value={this.state.titleInput}
+              onChange={this.handleInputChange}
+              style={styles.form}
+            />
+          </form>
+        </Paper>
         {this.renderSearchList()}
       </div>
     );

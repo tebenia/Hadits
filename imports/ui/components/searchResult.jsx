@@ -22,7 +22,7 @@ class SearchResult extends Component {
 
   render() {
     return (
-      <div className="one-third column">
+      <div className="six columns">
         <Card style={styles.card}>
           <CardHeader
             title={this.props.hadits.title}
